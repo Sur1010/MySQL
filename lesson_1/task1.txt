@@ -9,7 +9,7 @@ CREATE TABLE users(
     last_name varchar(255),
     email varchar(255),
     age int,
-    country varchar(255),
+    country ENUM("Armenia","Georgia","USA") NOT NULL,
     UNIQUE (email),
     PRIMARY KEY (id)
 );
