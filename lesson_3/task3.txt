@@ -1,0 +1,25 @@
+# ---- 3.1 ----
+USE my_app;
+SELECT COUNT(*) FROM users;
+
+# ---- 3.2 ----
+SELECT COUNT(*) FROM users WHERE country = 'Armenia';
+
+# ---- 3.3 ----
+SELECT SUM(salary) FROM users;
+
+# ---- 3.4 ----
+SELECT AVG(salary) FROM users WHERE country = 'Armenia';
+
+# ---- 3.5 ----
+SELECT * FROM users ORDER BY first_name;
+
+# ---- 3.6 ----
+SELECT * FROM users WHERE country = 'Georgia' ORDER BY salary ASC;
+
+# ---- 3.7 ----
+SELECT * FROM users WHERE country = 'Georgia' ORDER BY salary DESC;
+
+# ---- 3.8 ----
+SELECT country, COUNT(*) as user_count FROM users GROUP BY country;
+
