@@ -1,0 +1,46 @@
+# ---- 4.1 ----
+USE my_app;
+ALTER TABLE users
+ADD COLUMN height INT;
+ADD COLUMN weight INT;
+ADD COLUMN eye_color VARCHAR(255);
+
+# ---- 4.2 ----
+ADD COLUMN car VARCHAR(255);
+ADD COLUMN car_number INT;
+ADD COLUMN model VARCHAR(255); 
+ADD COLUMN year INT;
+
+# ---- 4.3 ----
+ADD COLUMN phone_number INT;
+ADD COLUMN operator VARCHAR(255); 
+ADD COLUMN mobile_country VARCHAR(255);
+
+# ---- Python ----
+
+# ---- 4.4 ----
+pip install camelcase
+
+# ---- 4.5 ----
+pip install virtualenv
+virtualenv venv
+
+# ---- 4.6 , 4.7 ----
+pip freeze > requirements.txt
+
+# ---- 4.8 ----
+pip install poetry
+poetry init
+poetry install
+poetry add camelcase
+poetry add prompt
+poetry add --dev flake8 (Flake8 is a Python linting tool that checks your Python codebase for errors, styling issues and complexity.)
+poetry update
+
+# ---- 4.9 ----
+pip install pipenv
+
+# ---- 4.10 ----
+
+# ---- 4.11 ----
+pip install mysql-connector-python
