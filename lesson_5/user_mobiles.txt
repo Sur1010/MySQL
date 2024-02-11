@@ -1,0 +1,10 @@
+USE new_db;
+CREATE TABLE user_mobiles(
+    id int AUTO_INCREMENT,
+    user_id INT,
+    phone_number INT,
+    operator VARCHAR(255),
+    mobile_country VARCHAR(255),
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

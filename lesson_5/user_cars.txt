@@ -1,0 +1,11 @@
+USE new_db;
+CREATE TABLE cars(
+    id int AUTO_INCREMENT,
+    user_id INT,
+    car VARCHAR(255),
+    model VARCHAR(255),
+    car_number INT,
+    year INT, 
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

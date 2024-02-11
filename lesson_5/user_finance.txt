@@ -1,0 +1,9 @@
+USE new_db;
+CREATE TABLE user_finance(
+    id int AUTO_INCREMENT,
+    user_id INT,
+    salary INT,
+    bonus INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
