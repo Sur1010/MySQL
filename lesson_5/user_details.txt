@@ -1,4 +1,3 @@
-USE new_db;
 CREATE TABLE user_details(
     id int AUTO_INCREMENT,
     user_id INT,
