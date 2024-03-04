@@ -1,0 +1,5 @@
+host = "localhost"
+user = "root"
+password = ""
+old_db = "my_app"
+main_db = "new_db"
