@@ -1,4 +1,4 @@
 host="localhost"
 user="root"
-password="S2020Sur"
+password=""
 database="new_db"
