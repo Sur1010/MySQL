@@ -44,7 +44,11 @@ table_name = input("Enter the name of the table you want to see: ")
 choice = input("select the action 'create', 'update', 'delete', 'list': ")
 
 if choice == "create":
-    pass
+    new_column_name = input('Enter the new column name: ')
+    column_type = input('Enter the column type(INT, VARCHAR(255), etc.): ')
+    create_query = f"ALTER TABLE {table_name} ADD COLUMN {new_column_name} {column_type}"
+    cursor.execute(create_query)
+    connection.commit()
 elif choice == "update":
     column_name = input('Enter the column name to update: ')
     new_value = input('Enter the new value: ')
@@ -57,18 +61,25 @@ elif choice == "delete":
     cursor.execute(delete_query)
     connection.commit()
 elif choice == "list":    
-    pass
+    limit_size = input('Select how many values yow want to see: ')
+    offset = 0
 
+    list_query = f"SELECT * FROM {table_name} LIMIT {limit_size} OFFSET {offset}"
+    cursor.execute(list_query)
+    results = cursor.fetchall()
+
+    for row in results:
+        print(row)
 
 # table_name_query = f'SELECT * FROM {table_name}'
 
 # cursor.execute(table_name_query)
 
-rows = cursor.fetchall()
+# rows = cursor.fetchall()
 
 
-for row in rows:
-    print(row)
+# for row in rows:
+#     print(row)
 
 cursor.close()
 connection.close()
