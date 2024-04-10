@@ -1,0 +1,8 @@
+CREATE TABLE billing_info (
+    id int AUTO_INCREMENT,
+    user_id INT,
+    address VARCHAR(255),
+    postal_code INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

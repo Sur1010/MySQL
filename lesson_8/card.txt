@@ -1,0 +1,8 @@
+CREATE TABLE card (
+    id int AUTO_INCREMENT,
+    user_id INT,
+    account_number INT, 
+    account_balance INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);

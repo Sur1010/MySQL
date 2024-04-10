@@ -1,0 +1,12 @@
+CREATE TABLE transactions (
+    id int AUTO_INCREMENT,
+    user_id INT,
+    date DATETIME,
+    money INT,
+    from_user_id INT,
+    to_user_id INT,
+    is_success BOOLEAN,
+    PRIMARY KEY (id),
+    FOREIGN KEY (from_user_id) REFERENCES users(id),
+    FOREIGN KEY (to_user_id) REFERENCES users(id)
+);
